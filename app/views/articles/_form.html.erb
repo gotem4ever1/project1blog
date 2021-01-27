@@ -1,8 +1,7 @@
 <!--edit form and new form are similar, using partial to factor out -->
 <!-- form builder %> -->
 <!-- bootstrap %> -->
-<!-- error messages link to shared/_errors.html.erb-->
-<%= render 'shared/errors' %>
+<%= render 'shared/errors', obj: @article %>
 
 
 <div class="row">
