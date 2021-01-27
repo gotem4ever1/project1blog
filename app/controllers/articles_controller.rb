@@ -1,4 +1,8 @@
 class ArticlesController < ApplicationController
+  #need http verification before making any actions
+  http_basic_authenticate_with name: "", password: "", except: [:index, :show]
+
+
   def index #make index for articles, link to app/views/articles/index.html.erb
      @articles = Article.all
    end

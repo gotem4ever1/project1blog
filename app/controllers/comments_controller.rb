@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
 
-#need http verification before making any actions 
-http_basic_authenticate_with name: "dhh", password: "secret", only: :destroy
+#need http verification before making any actions
+http_basic_authenticate_with name: "", password: "", only: :destroy
 
 
 # create comments
