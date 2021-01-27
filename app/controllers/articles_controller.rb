@@ -3,6 +3,7 @@ class ArticlesController < ApplicationController
   http_basic_authenticate_with name: "", password: "", except: [:index, :show]
 
 
+
   def index #make index for articles, link to app/views/articles/index.html.erb
      @articles = Article.all
    end
@@ -22,7 +23,7 @@ class ArticlesController < ApplicationController
 
   def create #create new article, update and save
     @article = Article.new(article_params)
-
+     @article.user = User.first #every new article has a user associated
   if  @article.save #save article
     redirect_to @article
   else
