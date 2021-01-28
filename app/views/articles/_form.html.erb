@@ -1,7 +1,15 @@
 <!--edit form and new form are similar, using partial to factor out -->
 <!-- form builder %> -->
 <!-- bootstrap %> -->
-<%= render 'shared/errors', obj: @article %>
+<!-- error messages link to shared/_errors.html.erb-->
+<% if @article.errors.any? %>
+ <h2>The following errors prevented the article from saving:</h2>
+ <ul>
+ <% @article.errors.full_messages.each do |msg|%>
+ <li><%= msg %></li>
+ <% end %>
+ </ul>
+<% end %>
 
 
 <div class="row">

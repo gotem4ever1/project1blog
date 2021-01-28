@@ -1,5 +1,3 @@
-<!-- partial for redirect to the article after done the comments %> -->
-
 <p>
   <strong>Commenter:</strong>
   <%= comment.commenter %>
@@ -10,9 +8,8 @@
   <%= comment.body %>
 </p>
 
-<!-- delete comments %> -->
 <p>
   <%= link_to 'Destroy Comment', [comment.article, comment],
                method: :delete,
-               data: { confirm: 'Are you sure?' } %>
+               data: { confirm: 'Are you sure?' },class: "btn btn-xs btn-danger" %>
 </p>

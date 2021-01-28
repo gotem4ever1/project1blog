@@ -1,7 +1,6 @@
 class ArticlesController < ApplicationController
-  #need http verification before making any actions
-  http_basic_authenticate_with name: "", password: "", except: [:index, :show]
 
+  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 
 
   def index #make index for articles, link to app/views/articles/index.html.erb
@@ -25,7 +24,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
      @article.user = User.first #every new article has a user associated
   if  @article.save #save article
-    redirect_to @article
+    redirect_to articles_path
   else
     render 'new' #use render to let @article back to new template
   end
@@ -35,7 +34,7 @@ def update  #update article
   @article = Article.find(params[:id])
 
   if @article.update(article_params)
-    redirect_to @article
+    redirect_to articles_path
   else
     render 'edit'  #use render to let @article back to new template
   end
@@ -44,7 +43,6 @@ end
 def destroy #delete article
   @article = Article.find(params[:id])
   @article.destroy
-
   redirect_to articles_path
 end
 
