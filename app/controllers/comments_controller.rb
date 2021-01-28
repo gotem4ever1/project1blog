@@ -1,6 +1,6 @@
 class CommentsController < ApplicationController
 
-  http_basic_authenticate_with name: "user", password: "chicken", except: [:index, :show]
+  http_basic_authenticate_with name: "user", password: "chicken", only: :destroy
 
 
 # create comments
