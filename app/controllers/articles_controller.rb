@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-    http_basic_authenticate_with name: "user", password: "chicken", except: [:index, :show]
+    
 
   def index #make index for articles, link to app/views/articles/index.html.erb
      @articles = Article.all
