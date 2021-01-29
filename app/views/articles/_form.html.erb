@@ -2,14 +2,14 @@
 <!-- form builder %> -->
 <!-- bootstrap %> -->
 <!-- when making a new file, error messages showed, stop saving -->
-<<% if @article.errors.any? %>
- <#h2>The following errors prevented the article from saving:</h2>
- <#ul>
- <<% @article.errors.full_messages.each do |msg|%>
- <#li><<%= msg %></li>
- <<% end %>
+<% if @article.errors.any? %>
+ <h2>The following errors prevented the article from saving:</h2>
+ <ul>
+ <% @article.errors.full_messages.each do |msg|%>
+ <li><%= msg %></li>
+ <% end %>
  </ul>
-<<% end %>
+<% end %>
 
 
 <div class="row">
