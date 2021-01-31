@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-    
+
 
   def index #make index for articles, link to app/views/articles/index.html.erb
      @articles = Article.all
@@ -10,9 +10,11 @@ class ArticlesController < ApplicationController
       @article = Article.find(params[:id])
     end
 
+
   def new #new method, link to app/views/articles/edit.html.erb
     @article = Article.new
   end
+
 
   def edit #edit article
     @article = Article.find(params[:id])
@@ -22,7 +24,7 @@ class ArticlesController < ApplicationController
   def create #create new article, update and save
     @article = Article.new(article_params)
   if  @article.save #save article
-    redirect_to articles_path
+    redirect_to @article
   else
     render 'new' #use render to let @article back to new template
   end
