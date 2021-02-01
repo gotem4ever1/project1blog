@@ -68,7 +68,7 @@ a certain technology or why you implemented your solution in a certain way?
 
 Project1
 
-I made a simple blog where you can create articles, make any changes and comments to them. 
+I made a simple blog where you can create articles, make any changes and comments to them.
 
 #### Completed Project deliverables:
 
@@ -78,4 +78,4 @@ https://projectblog1.herokuapp.com/
 
 * Link to source code on GitHub
 
-https://github.com/gotem4ever1/project1
+https://github.com/gotem4ever1/project1blog
