@@ -51,12 +51,6 @@ software like Gliffy or Omnigraffle.
 to work.
 * **Readme.md** Projects need a readme file in markdown explaining their project: a how and why of what you wanted to solve, how you built, problems, tech used.
 
-#### Completed Project deliverables:
-
-* Link to Heroku hosted project
-* Link to source code on GitHub
-
-
 ## Things to keep in mind
 Make sure that your code is:
 
@@ -71,3 +65,17 @@ We’ll also be looking at:
 * Quality of communication around decision-making. Can you defend why you chose
 a certain technology or why you implemented your solution in a certain way?
 * Your ability to pick up new technologies and push yourself.
+
+Project1
+
+I made a simple blog where you can create articles, make any changes and comments to them. 
+
+#### Completed Project deliverables:
+
+* Link to Heroku hosted project
+
+https://projectblog1.herokuapp.com/
+
+* Link to source code on GitHub
+
+https://github.com/gotem4ever1/project1

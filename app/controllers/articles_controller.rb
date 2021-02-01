@@ -24,7 +24,7 @@ class ArticlesController < ApplicationController
   def create #create new article, update and save
     @article = Article.new(article_params)
   if  @article.save #save article
-    redirect_to @article
+    redirect_to articles_path
   else
     render 'new' #use render to let @article back to new template
   end
